@@ -10,14 +10,14 @@ public class BoderDecorator implements ComponentDecorator {
 
 	@Override
 	public void display() {
-		addBoder();
+		addBorder();
 		c.display();
 		
 	}
 	
 	
-	public void addBoder(){
-		System.out.println("add boder");
+	public void addBorder(){
+		System.out.println("add border");
 	}
 
 }
