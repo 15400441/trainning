@@ -1,6 +1,6 @@
 package com.dylan.trainning.factory;
 
-public class DBLoggerFactory extends LoggerFactory {
+public class DBLoggerFactory implements LoggerFactory {
 
 	@Override
 	public Logger getLogger() {

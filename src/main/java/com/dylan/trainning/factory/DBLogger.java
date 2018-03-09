@@ -1,6 +1,6 @@
 package com.dylan.trainning.factory;
 
-public class DBLogger extends Logger{
+public class DBLogger implements Logger{
 
 	@Override
 	public void writhLog() {

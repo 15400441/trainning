@@ -1,7 +1,7 @@
 package com.dylan.trainning.factory;
 
-public abstract class LoggerFactory {
+interface LoggerFactory {
 	
-	public abstract Logger getLogger();
+	Logger getLogger();
 
 }

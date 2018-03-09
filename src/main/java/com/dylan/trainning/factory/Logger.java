@@ -1,7 +1,7 @@
 package com.dylan.trainning.factory;
 
-public abstract class Logger {
+interface Logger {
 	
-	public abstract void writhLog();
+	void writhLog();
 
 }
