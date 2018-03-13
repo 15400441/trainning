@@ -34,7 +34,7 @@ public class Account {
 	
 	
 	public void withdraw(double amount){
-		System.out.println(owner +" deposite "+amount);
+		System.out.println(owner +" withdraw "+amount);
 		accountState.withdraw(amount);
 		System.out.println("current balance:"+balance);
 		System.out.println("current state:"+ this.accountState.getClass().getName());

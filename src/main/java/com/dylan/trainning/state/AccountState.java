@@ -11,5 +11,14 @@ public abstract class AccountState {
 	abstract void compulateInterest();
 	
 	abstract void stateCheck();
+	
+	protected boolean withdrawCheck(double amount){
+		if(this.acc.getBalance()-amount<-2000){
+			System.out.println("operation restricted");
+			return false;
+		}
+		
+		return true;
+	}
 
 }

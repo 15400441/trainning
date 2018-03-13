@@ -2,6 +2,10 @@ package com.dylan.trainning.state;
 
 public class NormalState extends AccountState {
 
+	public NormalState(AccountState state) {
+		this.acc = state.acc;
+	}
+	
 	public NormalState(Account acc) {
 		this.acc = acc;
 	}
@@ -9,18 +13,24 @@ public class NormalState extends AccountState {
 	@Override
 	void deposite(double amount) {
 		this.acc.setBalance(this.acc.getBalance() + amount);
+		stateCheck();
 
 	}
 
 	@Override
 	void withdraw(double amount) {
-		// TODO Auto-generated method stub
+		
+		if(!withdrawCheck(amount))
+			return;
+			
+		this.acc.setBalance(this.acc.getBalance()-amount);
+		stateCheck();
 
 	}
 
 	@Override
 	void compulateInterest() {
-		// TODO Auto-generated method stub
+		System.out.println("normal state, no need to pay interest");
 
 	}
 
@@ -32,7 +42,7 @@ public class NormalState extends AccountState {
 		} else if (acc.getBalance() == -2000) {
 			acc.setState(new RestrictedState(this));
 		} else if (acc.getBalance() < -2000) {
-			System.out.println("操作受限！");
+			System.out.println("operation restricted");
 		}
 	}
 
